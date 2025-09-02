@@ -4,7 +4,7 @@ Beginner-friendly Python programs covering variables, loops, and functions.
 
 
 
-# Python Basics 
+# Python Basics 🐍
 
 Beginner-friendly Python programs covering variables, loops, functions, OOP, file handling, data analysis, and visualization.  
 This repository is structured into 30 daily lessons to help you go step by step from absolute beginner to intermediate level in Python.
@@ -108,8 +108,6 @@ Suggestions and corrections are always welcome!
 📜 License
 
 This project is licensed under the MIT License – feel free to use, share, and improve it.
-
-
 
 
 
