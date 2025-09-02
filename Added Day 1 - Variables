@@ -1,0 +1,18 @@
+Day1_Variables.py
+
+
+
+
+
+# Day 1: Python Variables
+# This program demonstrates variables and data types in Python
+
+# Assigning values to variables
+name = "Rohit"
+age = 25
+is_student = True
+
+# Printing variables
+print(f"My name is {name}")
+print(f"I am {age} years old")
+print(f"Student status: {is_student}")
