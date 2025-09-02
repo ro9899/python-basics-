@@ -1,0 +1,81 @@
+# Day 16 - OOP: Polymorphism & Encapsulation
+
+# --------------------
+# Polymorphism
+# --------------------
+
+# Example 1: Same method in different classes
+class Dog:
+    def speak(self):
+        return "Woof!"
+
+class Cat:
+    def speak(self):
+        return "Meow!"
+
+animals = [Dog(), Cat()]
+for animal in animals:
+    print(animal.speak())   # same method, different behavior
+
+# Example 2: Built-in polymorphism (len function works on different types)
+print("Length of string:", len("Python"))
+print("Length of list:", len([1, 2, 3, 4]))
+
+# Example 3: Polymorphism with inheritance
+class Bird:
+    def fly(self):
+        print("Some birds can fly.")
+
+class Sparrow(Bird):
+    def fly(self):
+        print("Sparrow flies high.")
+
+class Penguin(Bird):
+    def fly(self):
+        print("Penguins cannot fly.")
+
+birds = [Sparrow(), Penguin()]
+for b in birds:
+    b.fly()
+
+# --------------------
+# Encapsulation
+# --------------------
+
+# Example 4: Private variables (by convention, use _ or __)
+class BankAccount:
+    def init(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance   # private attribute (name mangling)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited {amount}, new balance = {self.__balance}")
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            print(f"Withdrew {amount}, new balance = {self.__balance}")
+        else:
+            print("Insufficient balance!")
+
+    def get_balance(self):
+        return self.__balance
+
+account = BankAccount("Alice", 1000)
+account.deposit(500)
+account.withdraw(300)
+print("Final balance:", account.get_balance())
+
+# Trying to access private variable directly (not recommended)
+# print(account.__balance)  #  AttributeError
+# Correct way:
+print("Accessing via method:", account.get_balance())
+
+
+
+
+
+
+
