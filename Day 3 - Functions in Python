@@ -1,0 +1,60 @@
+# Day 3 - Functions in Python
+
+# ----------------------------
+# 1. Basic Function
+# ----------------------------
+def greet():
+    print("Hello! Welcome to Python functions.")
+
+# Calling the function
+greet()
+
+print("-" * 30)
+
+# ----------------------------
+# 2. Function with Parameters
+# ----------------------------
+def greet_user(name):
+    print(f"Hello, {name}! How are you?")
+
+# Calling function with arguments
+greet_user("Ravi")
+greet_user("Anita")
+
+print("-" * 30)
+
+# ----------------------------
+# 3. Function with Return Value
+# ----------------------------
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(10, 20)
+print("Sum of 10 and 20 is:", result)
+
+print("-" * 30)
+
+# ----------------------------
+# 4. Function with Default Parameter
+# ----------------------------
+def greet_city(name, city="Nashik"):
+    print(f"{name} lives in {city}.")
+
+greet_city("Ravi")          # default city = Nashik
+greet_city("Anita", "Pune") # city provided
+
+print("-" * 30)
+
+# ----------------------------
+# 5. Function with Multiple Returns
+# ----------------------------
+def calculate(a, b):
+    addition = a + b
+    subtraction = a - b
+    multiplication = a * b
+    return addition, subtraction, multiplication
+
+add, sub, mul = calculate(5, 3)
+print("Addition:", add)
+print("Subtraction:", sub)
+print("Multiplication:", mul)
